@@ -81,14 +81,13 @@ def ordena_bubble_sort(lista: list) -> None:
 
     Parámetros:
     lista (list[int]): Lista de números enteros a ordenar.
-    """    
-    # TODO: acabar, 
+    """ 
     hay_intercambio = True
     while hay_intercambio:
         hay_intercambio = False
-        for e1, e2 in zip(lista, lista[1:]):  # recorro los elemetnos consecutivos
-            if e2 < e1:
-                e1, e2 = e2, e1
+        for i in range(len(lista) - 1):  # recorro los elemetnos consecutivos
+            if lista[i] > lista[i+1]:
+                lista[i], lista[i+1] = lista[i+1], lista[i]
                 hay_intercambio = True
     
         
